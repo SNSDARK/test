@@ -12,4 +12,4 @@ end
 end
 end
 end
-https://raw.githubusercontent.com/SNSDARK/test/main/antilag-ki.txt
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/SNSDARK/test/main/antilag-ki.txt')))()
