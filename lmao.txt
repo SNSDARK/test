@@ -1,5 +1,5 @@
 local plr = game:GetService("Players").LocalPlayer
-if autoki then do
+for i = 1,5 do
 game:GetService("RunService").RenderStepped:Connect(function()
 spawn(function()
 game.ReplicatedStorage.Events.DOKAMEHAME:InvokeServer("KiBlast",plr.Status,plr.Statics,plr.Character.HumanoidRootPart, plr.Character.RightHand, plr.Character,"nosexdd")
