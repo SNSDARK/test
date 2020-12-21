@@ -1,1 +1,17 @@
-https://raw.githubusercontent.com/SNSDARK/test/main/antilag-ki.txt
+local plr = game:GetService("Players").LocalPlayer
+for i = 1,1 do
+game:GetService("RunService").RenderStepped:Connect(function()
+spawn(function()
+game.ReplicatedStorage.Events.DOKAMEHAME:InvokeServer("KiBlast",plr.Status,plr.Statics,plr.Character.HumanoidRootPart, plr.Character.RightHand, plr.Character,"nosexdd")
+end)
+spawn(function()
+game.ReplicatedStorage.Events.DOKAMEHAME:InvokeServer("KiBlast",plr.Status,plr.Statics,plr.Character.HumanoidRootPart, plr.Character.LeftHand, plr.Character,"nosexdd")
+end)
+spawn(function()
+game.ReplicatedStorage.Events.DOKAMEHAME:InvokeServer("KiBlast",plr.Status,plr.Statics,plr.Character.HumanoidRootPart, plr.Character.RightHand, plr.Character,"nosexdd")
+end)
+spawn(function()
+game.ReplicatedStorage.Events.DOKAMEHAME:InvokeServer("KiBlast",plr.Status,plr.Statics,plr.Character.HumanoidRootPart, plr.Character.LeftHand, plr.Character,"nosexdd")
+end)
+end)
+end
