@@ -1,7 +1,7 @@
 
 local part = game.Workspace.PartStorage
 _G.A = true
-if part:WaitForChild("Ki") then do
+while part:WaitForChild("Ki") then do
 for _,v in pairs(game.Workspace.PartStorage:GetChildren()) do
 if v.Name == "Ki" then
 part.Ki:Destroy()
