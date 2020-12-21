@@ -12,3 +12,4 @@ end
 end
 end
 end
+https://raw.githubusercontent.com/SNSDARK/test/main/antilag-ki.txt
