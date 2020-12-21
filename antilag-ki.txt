@@ -1,7 +1,6 @@
-
 local part = game.Workspace.PartStorage
 _G.A = true
-while part:WaitForChild("Ki") then do
+while true do wait() if part:WaitForChild("Ki") then
 for _,v in pairs(game.Workspace.PartStorage:GetChildren()) do
 if v.Name == "Ki" then
 part.Ki:Destroy()
@@ -12,4 +11,3 @@ end
 end
 end
 end
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/SNSDARK/test/main/antilag-ki.txt')))()
