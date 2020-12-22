@@ -1,0 +1,17 @@
+local plr = game:GetService("Players").LocalPlayer
+local A_1 = "KiBlast"
+local A_2 = plr.Status
+local A_3 = plr.Statics
+local A_4 = plr.Character.HumanoidRootPart
+local A_5 = plr.Character.RightHand
+local A_6 = plr.Character
+local A_7 = "quehaces"
+local A_8 = {Humanoid = plr.Character.Humanoid}
+local A_9 = plr.Character.Humanoid
+local A_10 = plr.Status.Mode
+local A_11 = plr.Status.ModeActive
+local A_12 = plr.Status
+local A_13 = true
+local Event_1 = game:GetService("ReplicatedStorage").Events.DOKAMEHAME
+local Event_2 = game:GetService("ReplicatedStorage").Events.Transformatico
+local Event_3 = game:GetService("ReplicatedStorage").Events.IDURODEEEE
