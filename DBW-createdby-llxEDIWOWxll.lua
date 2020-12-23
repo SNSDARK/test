@@ -9,7 +9,6 @@ local A_6 = plr.Character
 local A_7 = "quehaces"
 local A_8 = {Humanoid = plr.Character.Humanoid}
 local A_9 = plr.Character.Humanoid
-local A_13 = true
 local Event_1 = game:GetService("ReplicatedStorage").Events.DOKAMEHAME
 local Event_2 = game:GetService("ReplicatedStorage").Events.Transformatico
 local Event_3 = game:GetService("ReplicatedStorage").Events.IDURODEEEE
