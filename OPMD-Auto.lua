@@ -32,7 +32,7 @@ local ServersToTP = HttpService:JSONDecode(game:HttpGet("https://games.roblox.co
 
 local bosses = {}
 for i,v in pairs(spawns:GetChildren())do
-    if v.Name == "Saitama" or v.Name == "Psykos" then
+    if v.Name == "Saitama" then
         if not table.find(bosses,v.Name) then	
             table.insert(bosses,v.Name)
         end
