@@ -20,6 +20,16 @@ pcall(function()
 			f1.Spread = {Min = 0, Max = 0}
 			f1.ViewKick = {Pitch = {Min = 0, Max = 0}, Yaw = {Min = 0, Max = 0}}
 		end
+		if f1.StoredAmmo <= 1000 and f1.WeaponName == "Beretta M9" then
+            		f1.MagSize = math.huge
+            		f1.Semi = false
+            		f1.FireTime = 0
+            		f1.StoredAmmo = math.huge
+			f1.Damage = {Max = 1500000, Min = 10000}
+			f1.BulletPenetration = 1500
+			f1.Spread = {Min = 0, Max = 0}
+			f1.ViewKick = {Pitch = {Min = 0, Max = 0}, Yaw = {Min = 0, Max = 0}}
+		end
 		end)
 		pcall(function()
 			local f2 = require(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Weapon2"))
@@ -33,10 +43,10 @@ pcall(function()
 		pcall(function()
 			local f3 = require(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Weapon3"))
 		if f3.StoredAmmo <= 1000 then
-            f3.MagSize = math.huge
-            f3.Semi = false
-            f3.FireTime = 0
-            f3.StoredAmmo = math.huge
+            		f3.MagSize = math.huge
+            		f3.Semi = false
+            		f3.FireTime = 0
+            		f3.StoredAmmo = math.huge
 			f3.Damage = {Max = 1500000, Min = 10000}
 			f3.BulletPenetration = 1500
 			f3.Spread = {Min = 0, Max = 0}
