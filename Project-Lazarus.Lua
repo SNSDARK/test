@@ -47,6 +47,7 @@ pcall(function()
 end)
 
 tpzh = false
+tpzb = false
 
 local InputService = game:GetService("UserInputService")
 
@@ -76,17 +77,20 @@ InputService.InputBegan:Connect(function(c, d)
 	end
 end)
 
-InputService.InputEnded:Connect(function(c, d)
-	if c.KeyCode == Enum.KeyCode.G and not d then
+InputService.InputBegan:Connect(function(e, f)
+	if e.KeyCode == Enum.KeyCode.H and not f then
+		if tpzb == true then
+			tpzb = false
+		else
+			tpzb = true
+		end
 	end
 end)
 
-
-
 spawn(function()
 	while true do wait()
-		if tpzh then
-			pcall(function()
+		if tpzh and tpzb == false then
+			pcall(function ()
 				for i,v in pairs(game:GetService("Workspace").Baddies:GetChildren()) do
 					if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid").Health ~= 0 then
 						repeat
@@ -95,11 +99,30 @@ spawn(function()
 						v.HeadBox.CanCollide = false
 						if v.HeadBox.Anchored == false then
 							v.HeadBox.Anchored = true
-						elseif tpzh == false then
+						elseif tpzh == false and tpzb then
 							v.HeadBox.Anchored = false
 						end
-						v.HeadBox.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position+Vector3.new(0,1,0)+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.LookVector*5
+						v.HeadBox.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position+Vector3.new(0,1,0)+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.LookVector*8
 					until not v:FindFirstChild("Humanoid") or not v:FindFirstChild("HumanoidRootPart") or not v:FindFirstChild("Humanoid").Health ~= 0 or not tpzh
+					end
+				end
+			end)
+		end
+		if tpzb and tpzh == false then
+			pcall(function()
+				for i,v in pairs(game:GetService("Workspace").Baddies:GetChildren()) do
+					if v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid").Health ~= 0 then
+						repeat
+							v.Torso.Transparency = 0
+							v.Torso.Material = "Neon"
+							v.Torso.CanCollide = false
+							if v.Torso.Anchored == false then
+								v.Torso.Anchored = true
+							elseif tpzb == false and tpzh then
+								v.Torso.Anchored = false
+							end
+							v.Torso.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position+Vector3.new(0,1,0)+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.LookVector*8
+						until not v:FindFirstChild("Humanoid") or not v:FindFirstChild("HumanoidRootPart") or not v:FindFirstChild("Humanoid").Health ~= 0 or not tpzb
 					end
 				end
 			end)
