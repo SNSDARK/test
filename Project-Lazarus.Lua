@@ -61,24 +61,11 @@ tpzb = false
 
 local InputService = game:GetService("UserInputService")
 
-InputService.InputBegan:Connect(function(a, b)
-	if a.KeyCode == Enum.KeyCode.T and not b then
-		if tpzh == false then
-			tpzh = true
-		end
-	end
-end)
-
-InputService.InputEnded:Connect(function(a, b)
-	if a.KeyCode == Enum.KeyCode.T and not b then
-		if tpzh == true then
-			tpzh = false
-		end
-	end
-end)
-
 InputService.InputBegan:Connect(function(c, d)
-	if c.KeyCode == Enum.KeyCode.G and not d then
+	if c.KeyCode == Enum.KeyCode.T and not d then
+		if tpzb then
+			tpzb = false
+		end
 		if tpzh == true then
 			tpzh = false
 		else
@@ -88,7 +75,10 @@ InputService.InputBegan:Connect(function(c, d)
 end)
 
 InputService.InputBegan:Connect(function(e, f)
-	if e.KeyCode == Enum.KeyCode.H and not f then
+	if e.KeyCode == Enum.KeyCode.G and not f then
+		if tpzh then
+			tpzh = false
+		end
 		if tpzb == true then
 			tpzb = false
 		else
