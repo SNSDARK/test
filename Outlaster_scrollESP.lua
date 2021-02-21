@@ -1,4 +1,5 @@
 if game.PlaceId == 5765666934 then
+  repeat wait() until game:IsLoaded()
   local function scrollesp()
     for __,v in pairs(game.Workspace:GetDescendants()) do
     if v.Name == "Part" and v:FindFirstChild("TouchInterest") and v:FindFirstAncestor("Part") then
